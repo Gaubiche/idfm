@@ -19,6 +19,7 @@ from .const import (
     CONF_TOKEN,
     CONF_TRANSPORT,
     CONF_NB_ENTITIES,
+    CONF_REFRESH_RATE,
     DOMAIN,
 )
 
@@ -55,6 +56,10 @@ class IDFMFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
                 vol.Required(CONF_TOKEN): str,
                 vol.Required(CONF_EXCLUDE_ELEVATORS, default=True): bool,
                 vol.Required(CONF_NB_ENTITIES, default=4): vol.All(
+                    vol.Range(min=1),
+                    vol.Coerce(int)
+                ),
+                vol.Required(CONF_REFRESH_RATE, default=5): vol.All(
                     vol.Range(min=1),
                     vol.Coerce(int)
                 ),

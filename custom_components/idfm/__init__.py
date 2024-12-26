@@ -26,9 +26,10 @@ from .const import (
     DATA_TRAFFIC,
     DOMAIN,
     STARTUP_MESSAGE,
+    CONF_REFRESH_RATE
 )
 
-SCAN_INTERVAL = timedelta(minutes=3)
+SCAN_INTERVAL = timedelta(minutes=CONF_REFRESH_RATE)
 PLATFORMS = [Platform.BINARY_SENSOR, Platform.CALENDAR, Platform.SENSOR]
 
 _LOGGER: logging.Logger = logging.getLogger(__package__)

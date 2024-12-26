@@ -7,7 +7,8 @@
           "data": {
             "api_token": "Collez votre token ici",
             "exclude_elevator_issues": "Exclure les problèmes d'ascenseurs en panne",
-            "number_time_entities": "Nombre d'entitées pour les horaires"
+            "number_time_entities": "Nombre d'entitées pour les horaires",
+            "refresh_rate": "Taux de rafraichissement (minutes)"
           }
         },
         "transport": {
